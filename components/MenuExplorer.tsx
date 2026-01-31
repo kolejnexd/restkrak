@@ -8,6 +8,7 @@ import Link from "next/link";
 import { ROUTES, COMPANY_DATA } from "@/lib/constants";
 
 import { CATEGORIES, MENU_ITEMS } from "@/lib/menu-data";
+import { AddToCartButton } from "./cart/AddToCartButton";
 
 export const MenuExplorer = () => {
   const [activeCategory, setActiveCategory] = useState("Wszystkie");
@@ -71,17 +72,23 @@ export const MenuExplorer = () => {
               key={item.id}
               layoutId={`card-${item.id}`}
               onClick={() => setSelectedItem(item)}
-              className="group bg-surface border border-border-soft p-6 rounded-sm cursor-pointer hover:border-primary/50 hover:shadow-md transition-all relative overflow-hidden"
+              className="group bg-surface border border-border-soft p-6 rounded-sm cursor-pointer hover:border-primary/50 hover:shadow-md transition-all relative overflow-hidden flex flex-col justify-between"
             >
-              <div className="flex justify-between items-start mb-2">
-                <h3 className="font-serif font-bold text-lg text-ink group-hover:text-primary transition-colors">{item.name}</h3>
-                {item.price && <span className="font-medium text-gold">{item.price}</span>}
+              <div>
+                <div className="flex justify-between items-start mb-2">
+                    <h3 className="font-serif font-bold text-lg text-ink group-hover:text-primary transition-colors pr-2">{item.name}</h3>
+                    {item.price && <span className="font-medium text-gold whitespace-nowrap">{item.price}</span>}
+                </div>
+                <p className="text-sm text-muted mb-4 line-clamp-2">{item.description}</p>
+                <div className="flex gap-2 flex-wrap mb-4">
+                    {item.tags.map(tag => (
+                    <span key={tag} className="text-[10px] uppercase tracking-wider bg-background-alt text-muted px-2 py-1 rounded-sm">{tag}</span>
+                    ))}
+                </div>
               </div>
-              <p className="text-sm text-muted mb-4 line-clamp-2">{item.description}</p>
-              <div className="flex gap-2 flex-wrap">
-                {item.tags.map(tag => (
-                  <span key={tag} className="text-[10px] uppercase tracking-wider bg-background-alt text-muted px-2 py-1 rounded-sm">{tag}</span>
-                ))}
+
+              <div className="flex justify-end">
+                  <AddToCartButton item={{...item, id: item.id.toString()}} />
               </div>
             </motion.div>
           ))}
@@ -120,11 +127,11 @@ export const MenuExplorer = () => {
                 <p className="text-muted leading-relaxed mb-8">{selectedItem.description}</p>
 
                 <div className="grid grid-cols-2 gap-4">
-                  <Link href={ROUTES.delivery} className="w-full">
-                    <Button className="w-full justify-center">Zamów Online</Button>
-                  </Link>
-                  <a href={`tel:${COMPANY_DATA.contact.phone}`} className="w-full">
-                    <Button variant="outline" className="w-full justify-center">Zadzwoń</Button>
+                  <div className="w-full">
+                      <AddToCartButton item={{...selectedItem, id: selectedItem.id.toString()}} variant="full" />
+                  </div>
+                  <a href={`tel:${COMPANY_DATA.contact.phone}`} className="w-full mt-4">
+                    <Button variant="outline" className="w-full justify-center h-[52px]">Zadzwoń</Button>
                   </a>
                 </div>
               </div>
