@@ -5,6 +5,9 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SchemaJSONLD } from "@/components/SchemaJSONLD";
 import { SmoothScroll } from "@/components/SmoothScroll";
+import { CartProvider } from "@/context/CartContext";
+import { CartDrawer } from "@/components/cart/CartDrawer";
+import { CartTrigger } from "@/components/cart/CartTrigger";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
@@ -23,15 +26,18 @@ export default function RootLayout({
     return (
         <html lang="pl">
             <body className={`${inter.variable} ${playfair.variable} font-sans bg-background text-ink`}>
-                <SmoothScroll />
-                <SchemaJSONLD />
-                <Header />
-                <main className="min-h-screen flex flex-col pt-20">
-                    {children}
-                </main>
-                <Footer />
+                <CartProvider>
+                    <SmoothScroll />
+                    <SchemaJSONLD />
+                    <Header />
+                    <main className="min-h-screen flex flex-col pt-20">
+                        {children}
+                    </main>
+                    <Footer />
+                    <CartDrawer />
+                    <CartTrigger />
+                </CartProvider>
             </body>
         </html>
     );
 }
-

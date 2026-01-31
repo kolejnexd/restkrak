@@ -1,0 +1,12 @@
+
+> restauracja-krakoski@0.0.0 dev
+> next dev
+
+▲ Next.js 16.1.4 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.2:3000
+
+✓ Starting...
+✓ Ready in 1118ms
+○ Compiling /menu ...
+ GET /menu/ 200 in 7.7s (compile: 6.6s, render: 1148ms)
