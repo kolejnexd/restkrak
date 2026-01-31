@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/jakub/Desktop/Krakoski/Strona%20Internetowa-krakoski/app/not-found.tsx"],"sourcesContent":["import Link from \"next/link\";\n\nexport default function NotFound() {\n    return (\n        <div className=\"flex flex-col items-center justify-center min-h-[60vh] text-center px-4\">\n            <h1 className=\"text-6xl font-serif font-bold text-primary mb-4\">404</h1>\n            <h2 className=\"text-2xl font-semibold mb-6\">Strona nie została znaleziona</h2>\n            <p className=\"text-muted mb-8 max-w-md\">\n                Przepraszamy, ale strona której szukasz nie istnieje. Być może została przeniesiona lub usunięta.\n            </p>\n            <Link\n                href=\"/\"\n                className=\"px-6 py-3 bg-primary text-white rounded-sm hover:bg-primary-hover transition-colors\"\n            >\n                Wróć do strony głównej\n            </Link>\n        </div>\n    );\n}\n"],"names":[],"mappings":";;;;;AAAA;;;AAEe,SAAS;IACpB,qBACI,8OAAC;QAAI,WAAU;;0BACX,8OAAC;gBAAG,WAAU;0BAAkD;;;;;;0BAChE,8OAAC;gBAAG,WAAU;0BAA8B;;;;;;0BAC5C,8OAAC;gBAAE,WAAU;0BAA2B;;;;;;0BAGxC,8OAAC,0LAAI;gBACD,MAAK;gBACL,WAAU;0BACb;;;;;;;;;;;;AAKb"}}]
-}
