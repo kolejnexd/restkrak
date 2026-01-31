@@ -1,0 +1,16 @@
+{
+    "name": "Restauracja Krakoski",
+    "short_name": "Krakoski",
+    "description": "Polska kuchnia na Kazimierzu",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#F6F3EE",
+    "theme_color": "#C61F2D",
+    "icons": [
+        {
+            "src": "/icon",
+            "sizes": "any",
+            "type": "image/png"
+        }
+    ]
+}

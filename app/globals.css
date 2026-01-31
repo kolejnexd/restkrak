@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #F6F3EE;
+  --color-background-alt: #EEE9E2;
+  --color-surface: #FFFFFF;
+
+  --color-border-soft: #E2DBD2;
+  --color-border-strong: #C9C1B6;
+
+  --color-plaster: #8E8A84;
+  --color-ink: #141312;
+  --color-muted: #5F5B55;
+
+  --color-primary: #C61F2D;
+  --color-primary-hover: #9E1823;
+  --color-primary-soft: #F6D6D9;
+
+  --color-secondary: #1E5BB8;
+  --color-secondary-hover: #143E7D;
+  --color-secondary-soft: #D8E6FF;
+
+  --color-gold: #D6A61D;
+  --color-gold-soft: #FFF0C2;
+  --color-gold-brass: #B8860B;
+
+  --color-green: #2C6A45;
+  --color-green-soft: #D9F0E3;
+
+  --color-cyan: #00CED1;
+  --color-cyan-soft: #CFF7F7;
+
+  --color-frame: #0F1011;
+  --color-footer: #2A1D1B;
+}
+
+@layer base {
+  html {
+    /* scroll-behavior: smooth; - Disabled to allow Lenis to handle smooth scrolling */
+    @apply bg-background text-ink;
+  }
+
+  body {
+    @apply antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+  }
+}

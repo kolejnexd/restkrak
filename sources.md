@@ -1,0 +1,486 @@
+# Sources & Data Verification (2026) — Restauracja Krakoski
+
+**Data Verification Date:** 2026-01-25
+**Status:** Verified via public sources (Wolt, Facebook/Instagram, Tripadvisor, katalogi lokalne)
+
+## Identity (SSOT)
+
+* **Brand Name (official):** Restauracja Krakoski ([Facebook][1])
+* **Address:** ul. Miodowa 39, 31-052 Kraków (Kazimierz) ([Wolt][2])
+* **Primary Phone:** +48 732 924 034 ([Wolt][2])
+* **Google Maps link (public):** https://maps.app.goo.gl/Sc8Edr9BdvY5PGLg8
+
+## Opening Hours (SSOT)
+
+**Godziny Otwarcia:**
+
+* Poniedziałek: 11:00–22:00
+* Wtorek: 11:00–22:00
+* Środa: 11:00–22:00
+* Czwartek: 11:00–22:00
+* Piątek: 11:00–22:00
+* Sobota: 11:00–22:00
+* Niedziela: 11:00–22:00
+
+**Decyzja dla strony (SSOT):** publikujemy pełny harmonogram 11:00–22:00.
+
+## Delivery Platforms (Verified active)
+
+* **Wolt:** Krakoski (Miodowa 39) +48 732 924 034 + godziny dostaw ([Wolt][2])
+* **Pyszne.pl:** Krakoski (Miodowa 39) — strona menu/dostaw ([Pyszne.pl][4])
+* **Glovo:** Krakoski (Kraków) — strona sklepu/menu ([Glovoapp][5])
+* **Uber Eats:** link do sklepu był podany w założeniach projektu; agent ma go zweryfikować ręcznie w finalnym raporcie (czasem UE wymaga geolokalizacji i nie zawsze daje stabilny podgląd w crawlerze).
+
+## Social Media (Verified)
+
+* **Facebook:** Restauracja Krakoski (page ID: 61564021922040) ([Facebook][1])
+* **Instagram:** @restauracja_krakoski ([Instagram][6])
+
+## Website / Domain
+https://krakoski-kazimierz.pl/
+
+## Email 
+
+kontakt@krakoski-kazimierz.pl
+
+
+* **Domowe smaki / kuchnia polska / Kazimierz / możliwa dostawa** — komunikowane na social ([Facebook][1])
+* **Menu klasyczne (pierogi, schabowy, zupy itd.)** — potwierdzalne po kartach dań na platformach (np. Glovo/Wolt). ([Glovoapp][5])
+
+## Important Correction / Disambiguation
+
+* **„Polakowski” to osobny byt/brand** funkcjonujący pod tym samym adresem Miodowa 39 i innymi numerami telefonu (np. +48 12 421 21 17). ([polakowski.com.pl][8])
+  **Nie używać** nazwy „Polakowski”, domeny polakowski.com.pl ani ich telefonów w danych Krakoski.
+
+---
+[1]: https://www.facebook.com/p/Restauracja-Krakoski-61564021922040/?utm_source=chatgpt.com "Restauracja Krakoski | Kazimierz"
+[2]: https://wolt.com/pl/pol/krakow/restaurant/krakoski-krk?srsltid=AfmBOopFIPwxQJsZTvXv2UVj0hRE6IiB3MQaFO8vslmNqNDM_p3deHdf&utm_source=chatgpt.com "Krakoski | Wolt | Dostawa | Kraków"
+[3]: https://maps.app.goo.gl/2dy4dQTJpXpk5uwW8?g_st=com.google.maps.preview.copy&utm_source=chatgpt.com "https://maps.app.goo.gl/2dy4dQTJpXpk5uwW8?g_st=com..."
+[4]: https://www.pyszne.pl/menu/krakoski?utm_source=chatgpt.com "Krakoski Kraków - Zamów z Dostawą"
+[5]: https://glovoapp.com/pl/pl/krakow/stores/krakoski-kra?utm_source=chatgpt.com "Kraków: Krakoski z dostawą na terenie miasta"
+[6]: https://www.instagram.com/restauracja_krakoski/?utm_source=chatgpt.com "restauracja_krakoski"
+[7]: https://cityon.pl/miejsce/restauracja-krakoski-miodowa-39-krakow?utm_source=chatgpt.com "Restauracja Krakoski | Miodowa 39, Kraków"
+[8]: https://www.polakowski.com.pl/?utm_source=chatgpt.com "Polakowski - Kraków"
+
+## Menu Structure 
+🍽️ KRAKOSKI — KOMPLETNE MENU (szczegółowe)
+🌅 ŚNIADANIA
+Jajecznica z 2 składnikami (Scrambled eggs with 2 extras)
+
+Na maśle / with butter — 15 zł
+Z bekonem / bacon — 17 zł
+Z szynką / ham — 17 zł
+Cebula / onion — +1 zł
+Pomidor / tomato — +1 zł
+
+Opis dania:
+Klasyczna jajecznica przygotowywana na maśle — kremowa, delikatna i sycąca. Wersja z bekonem jest bardziej wyrazista i „dymna”, a z szynką łagodniejsza i bardziej klasyczna. Cebula dodaje słodyczy i aromatu, a pomidor daje lekką świeżość i soczystość.
+
+Dla kogo?
+Idealna na szybkie, konkretne śniadanie: proste, znane smaki, bez niespodzianek.
+
+Jajka sadzone z 2 składnikami (Fried eggs with 2 extras)
+
+Na maśle / with butter — 15 zł
+Z bekonem / bacon — 17 zł
+Z szynką / ham — 17 zł
+Cebula / onion — +1 zł
+Pomidor / tomato — +1 zł
+
+Opis dania:
+Jajka sadzone z płynnym żółtkiem (klasyczny comfort-food). Na maśle są delikatne i aromatyczne. Bekon dodaje chrupkości i mocniejszego smaku, szynka jest bardziej łagodna. Cebula i pomidor świetnie „podbijają” smak i urozmaicają talerz.
+
+Dla kogo?
+Jeśli lubisz śniadania „konkretne” i klasyczne — to jest top wybór.
+
+Omlet na słono z 2 dodatkami (Omelette with 2 extras)
+
+Z bekonem / bacon — 21 zł
+Z szynką / ham — 21 zł
+Cebula / onion — +1 zł
+Pomidor / tomato — +1 zł
+
+Opis dania:
+Puszysty omlet w wersji wytrawnej — bardziej „mięsisty” i sycący niż jajecznica. Bekon daje mocniejszy, intensywny profil smakowy, a szynka robi omlet bardziej klasyczny i delikatny. Cebula wprowadza aromat, a pomidor dodaje lekkości i świeżości.
+
+Dla kogo?
+Dla osób, które chcą śniadanie bardziej „na ciepło i na bogato” — ale nadal prosto.
+
+Talerz śniadaniowy (Plate for one) — 29 zł
+
+W zestawie:
+
+Boczek / bacon lub Szynka / ham
+
+Ser / cheese
+
+Frankfurterka / sausage
+
+Pomidor / tomato
+
+Ogórek / cucumber
+
+Pieczywo / bread
+
+Masło / butter
+
+Jajko sadzone / fried egg
+
+Twarożek ze szczypiorkiem / cottage cheese with chives
+
+Opis dania:
+Pełny, sycący „talerz śniadaniowy” — dużo elementów na raz, idealny gdy chcesz zjeść porządnie i różnorodnie. Masz tu miks: białko (jajko, mięso/ser), świeże dodatki (warzywa), pieczywo i twarożek z szczypiorkiem, który daje lekkość i świeży, kremowy akcent.
+
+Dla kogo?
+Dla głodnych 😄 albo gdy chcesz „spróbować wszystkiego” w jednym zestawie.
+
+Szakszuka (Shakshuka) — 27 zł
+
+Opis dania:
+Śniadaniowy klasyk w stylu „na gorąco” — jajka w aromatycznym sosie pomidorowym z wyraźnym, rozgrzewającym charakterem. Szakszuka jest soczysta, intensywna i świetnie pasuje do pieczywa (najlepiej „wymieniać” sos do końca).
+
+Dla kogo?
+Dla osób, które lubią wyraziste smaki, pomidory, ciepłe i rozgrzewające śniadania.
+
+Tosty z szynką i serem (Toast with ham and cheese) — 25 zł
+
+Opis dania:
+Ciepłe, chrupiące tosty z klasycznym połączeniem szynki i ciągnącego się sera. Proste, szybkie, „pewniak” — idealne, gdy chcesz coś na ciepło, ale bez ciężkich potraw.
+
+Dla kogo?
+Dla fanów klasyki i prostych smaków.
+
+🍲 ZUPY
+Żurek (Sour rye soup) — 17 zł
+
+Warianty:
+
+z jajkiem / with egg — 20 zł
+
+z ziemniakami / with potatoes — 20 zł
+
+w chlebie — 26 zł
+
+Opis dania:
+Żurek to kwaśna, aromatyczna zupa na zakwasie żytnim — klasyk kuchni polskiej. Ma wyrazisty smak (lekko kwaśny, „zakwasowy”), jest rozgrzewający i sycący.
+Wersja z jajkiem jest bardziej „śniadaniowa”, wersja z ziemniakami robi się solidnym obiadem, a żurek w chlebie to już konkret — zupa podawana w jadalnym bochenku, który chłonie smak.
+
+Dla kogo?
+Dla miłośników polskich, tradycyjnych smaków i zup „na konkretnie”.
+
+Barszcz czerwony (Borscht) — 13 zł
+
+Warianty:
+
+z uszkami (z farszem grzybowym) / with mushroom filling — 22 zł
+
+z kołdunami (z farszem mięsnym) / with meat filling — 22 zł
+
+z jajkiem / with egg — 16 zł
+
+Opis dania:
+Czerwony barszcz to klarowna, intensywnie buraczkowa zupa — lekko słodka, aromatyczna, głęboka w smaku.
+Z uszkami robi się „świątecznie-klasyczny” zestaw (delikatny grzybowy farsz). Z kołdunami jest bardziej mięsny i treściwy. Z jajkiem — najprostsza, tradycyjna wersja.
+
+Dla kogo?
+Dla fanów barszczu w każdej formie — od lekkiej zupy po pełniejszy posiłek.
+
+Pomidorowa z lanym ciastem (Tomato soup with dough) — 16 zł
+
+Opis dania:
+Pomidorowa w tradycyjnym stylu, z dodatkiem lanego ciasta (delikatne kluski/ciasto lane). Zupa jest miękka, komfortowa, lekko kwaśna od pomidora, a ciasto daje fajną „domową” strukturę i sytość.
+
+Dla kogo?
+Dla tych, którzy lubią klasyczną pomidorową, ale z czymś bardziej domowym niż makaron.
+
+Ogórkowa z ziemniakami (Cucumber soup with potatoes) — 16 zł
+
+Opis dania:
+Zupa ogórkowa to smak kuchni domowej: kwaśna, aromatyczna, „konkretna”. Ziemniaki sprawiają, że jest sycąca i idealna na chłodniejszy dzień.
+
+Dla kogo?
+Dla osób, które lubią charakterne, lekko kwaśne zupy.
+
+Rosół (Chicken soup) — 18 zł
+
+Opis dania:
+Klasyczny rosół — lekki, klarowny, rozgrzewający. Idealny „na regenerację”, na lepszy żołądek albo gdy chcesz coś delikatnego.
+
+Dla kogo?
+Dla każdego — zwłaszcza gdy chcesz coś lekkiego i kojącego.
+
+🥟 PIEROGI I NALEŚNIKI (Dumplings and crepes)
+Pierogi z mięsem (Dumplings with meat) — 30 zł
+
+Opis dania:
+Pierogi z wyrazistym, mięsnym farszem — klasyczne, sycące i bardzo „obiadowe”. Smak jest głęboki, lekko pieczony/mięsny, idealny dla fanów tradycji.
+
+Pierogi z kapustą i grzybami (Dumplings with cabbage and mushrooms) — 29 zł
+
+Opis dania:
+Tradycyjny farsz kapustno-grzybowy — aromatyczny, lekko kwaśny od kapusty i „leśny” przez grzyby. Bardzo polski smak, który kojarzy się domowo i klasycznie.
+
+Pierogi ruskie (Dumplings with cottage cheese and potatoes) — 28 zł
+
+Opis dania:
+Najbardziej kultowe pierogi: ziemniaki + twaróg. Kremowy, delikatny farsz, łagodny smak, mega comfort-food. Świetne dla osób, które lubią „bezpieczne”, miękkie smaki.
+
+Pierogi z serem na słodko (Dumplings with sweet cheese) — 28 zł
+
+Opis dania:
+Słodkie pierogi z twarogiem — deserowe, miękkie i delikatne. Dla fanów słodkich, tradycyjnych klimatów.
+
+Pierogi z owocami (Dumplings with fruit) — 29 zł
+
+Dostępne owoce: truskawka lub borówka (strawberry or bilberry)
+
+Opis dania:
+Pierogi w wersji owocowej — lekkie, słodko-kwaśne, świeże. Truskawka będzie bardziej „soczysta i deserowa”, borówka bardziej głęboka i aromatyczna.
+
+Naleśniki z serem na słodko (Crepes with cottage sweet cheese) — 25 zł
+
+Opis dania:
+Miękkie naleśniki z delikatnym, słodkim serem. Idealne jako deser albo lekki, słodki obiad — bardzo lubiane przez osoby, które chcą coś „nie ciężkiego”.
+
+Naleśniki ze szpinakiem (Crepes with spinach) — 25 zł
+
+Opis dania:
+Wytrawne naleśniki ze szpinakiem — delikatne, kremowe i bardziej „fit-komfortowe”. Szpinak daje świeżość i lekkość, a naleśnik robi całość sycącą.
+
+🍛 DANIA GŁÓWNE (Main courses)
+Kotlet schabowy (Breaded pork chop)
+
+na smalcu / on lard — 27 zł
+
+z czosnkiem / with garlic — 28 zł
+
+Opis dania:
+Polska klasyka: panierowany schabowy, chrupiący z zewnątrz i soczysty w środku. Wersja na smalcu jest bardziej tradycyjna i „mięsna” w smaku, a wersja czosnkowa ma mocniejszy, aromatyczny charakter.
+
+Kotlet z kurczaka (Breaded chicken breast) — 28 zł
+
+Opis dania:
+Panierowana pierś z kurczaka — delikatniejsza niż schabowy, lekka, ale nadal chrupiąca. Idealna dla osób, które wolą łagodniejsze mięso.
+
+Kotlet mielony (Breaded minced cutlet) — 26 zł
+
+Opis dania:
+Klasyczny mielony: miękki, soczysty, bardzo „domowy”. Smak jest bardziej przyprawowy i „mięsno-kotletowy” niż schabowy.
+
+Devolay — 30 zł
+
+Opis dania:
+Kotlet drobiowy w stylu devolay — chrupiąca panierka na zewnątrz i soczyste wnętrze. To danie jest bardziej „premium-comfort” niż zwykły kotlet z kurczaka.
+
+Gołąbki z mięsem i ryżem z sosem pomidorowym (Cabbage rolls stuffed with meat and rice with tomato sauce) — 35 zł
+
+Opis dania:
+Gołąbki w liściu kapusty, w środku farsz z mięsa i ryżu, podane z sosem pomidorowym. Danie jest sycące, miękkie i bardzo „klasyczne polskie”.
+
+Filet z ryby (Fish filet) — 27 zł
+
+Opis dania:
+Delikatny filet rybny — lekki, idealny gdy chcesz coś mniej ciężkiego niż mięso. Dobre też w połączeniu z dodatkami typu ziemniaki lub surówka.
+
+Bigos z pieczywem (Cabbage with meat and bread) — 28 zł
+
+Opis dania:
+Bigos — treściwa, aromatyczna kapusta z mięsem. To danie ma intensywny, długo gotowany charakter: jest „gęste”, sycące i bardzo polskie. Podawane z pieczywem, żeby zebrać smak do końca.
+
+Placki ziemniaczane (Potato pancakes)
+
+placki klasyczne — 19 zł
+
+ze śmietaną / with cream — 21 zł
+
+z gulaszem / with goulash — 32 zł
+
+Opis dania:
+Chrupiące placki ziemniaczane — złote, intensywne w smaku. Z kwaśną śmietaną są klasyczne i lekkie w odbiorze, a z gulaszem robi się z tego pełny, bardzo sycący obiad „na grubo”.
+
+Czulent z pieczywem (Jewish stew with beef and vegetables with bread) — 32 zł
+
+Opis dania:
+Czulent to gęsty, długogotowany gulaszowy „stew” z wołowiną i warzywami. Smak jest głęboki, ciemniejszy, bardzo treściwy i rozgrzewający. Pieczywo idealnie pasuje do sosu.
+
+Kiełbasa z cebulką i pieczywem (Fried sausage with onion and bread) — 25 zł
+
+Opis dania:
+Smażona kiełbasa z cebulką — aromatyczna, prosta i konkretna. Idealna jako szybkie, sycące danie „pod piwo” albo na głód.
+
+Indyk z borowikami w sosie grzybowym (Turkey breast in forest mushroom sauce) — 31 zł
+
+Opis dania:
+Delikatna pierś z indyka w sosie grzybowym z borowikami. Sos jest kremowy, aromatyczny i „leśny”, a indyk — łagodny i miękki. Bardzo dobry wybór, jeśli chcesz coś bardziej eleganckiego, ale nadal domowego.
+
+Gulasz (Goulash) — 29 zł
+
+Opis dania:
+Klasyczny gulasz — gęsty, mięsny, rozgrzewający. Idealny do dobrania z dodatkami typu ziemniaki, ryż albo placki (jeśli chcesz wersję „na bogato”).
+
+👨‍🍳 SZEF KUCHNI POLECA (The chef’s recommends)
+Pasztet z kaczki z sosem żurawinowym, chrzanowym
+
+(Duck pate with cranberry-horseradish sauce) — 22 zł
+
+Opis dania:
+Kaczkowy pasztet ma głębszy, bardziej „szlachetny” smak niż klasyczny drobiowy. Sos żurawinowy daje słodycz i owocową świeżość, a chrzanowy dodaje lekkiej ostrości — razem robią super kontrast.
+
+Rolada wieprzowa z nadzieniem pieczarkowo-serowym
+
+(Pork roll stuffed with mushrooms and cheese) — 30 zł
+
+Opis dania:
+Rolada z wieprzowiny z nadzieniem pieczarek i sera — treściwa, aromatyczna, bardzo obiadowa. Grzyby dodają głębi, a ser daje kremową, „ciągnącą” nutę.
+
+Żeberka wieprzowe w sosie BBQ oraz miodzie z frytkami
+
+(Pork ribs in BBQ sauce and honey sauce with fries) — 49 zł
+
+Opis dania:
+Najbardziej „konkretny” zestaw: żeberka w sosie BBQ z nutą miodu (słodko-dymne), do tego frytki. Smak jest intensywny, mięsny, lekko słodki — typowe danie dla fanów BBQ.
+
+🍟 DODATKI (Extras)
+
+Ryż / Rice — 8 zł (lekki, neutralny dodatek do sosów i mięs)
+
+Ziemniaki / Potatoes — 9 zł (klasyczne do kotletów i dań domowych)
+
+Frytki / Fries — 13 zł (chrupiące, idealne do żeberek i kiełbasy)
+
+Kopytka / Potato dumplings — 12 zł (miękkie, świetne do sosów: grzybowego i gulaszu)
+
+Kasza gryczana / Buckwheat — 8 zł (wyrazista, pasuje do mięs i sosów)
+
+Buraki zasmażane / Stewed beetroot — 10 zł (słodko-kwaśny klasyk, idealny do kotleta)
+
+Marchewka z groszkiem / Boiled carrot with peas — 10 zł (łagodny, lekki dodatek)
+
+Ogórek kiszony 2 szt. / Sour cucumber 2 pcs. — 10 zł (kontrast do mięsnych dań)
+
+Kapusta zasmażana / Fried cabbage — 10 zł (aromatyczna, domowa, pasuje do schabowego i mielonego)
+
+Szpinak / Spinach — 11 zł (bardziej lekki, warzywny dodatek)
+
+Bufet sałatkowy / Salad buffet — 13 zł (odświeżający dodatek do cięższych dań)
+
+Sos pomidorowy / Tomato sauce — 8 zł
+
+Sos grzybowy / Mushroom sauce — 8 zł
+
+Ketchup / Mustard / Mayonnaise / Aioli / BBQ / Sriracha / Vinaigrette — 5 zł
+
+🍰 DESERY (Desserts)
+Pascha sernik (Cheesecake Pascha) — 30 zł
+
+Opis:
+Kremowy sernik w stylu paschy — deser bogaty, delikatny i bardzo „świąteczno-klasyczny”. Dla fanów serników premium.
+
+Orzechowe ciasto (Nut Cake) — 22 zł
+
+Opis:
+Ciasto orzechowe — aromatyczne, intensywne, często bardziej „gęste” i sycące niż zwykłe ciasto. Idealne do kawy.
+
+Szarlotka na ciepło z gałką lodów i bitą śmietaną
+
+(Warm Apple Pie with ice cream and whipped cream) — 21 zł
+
+Opis:
+Ciepła szarlotka + zimne lody = najlepszy kontrast. Do tego bita śmietana — deser „na bogato”, bardzo lubiany.
+
+Lody waniliowe z owocami i bitą śmietaną
+
+(Vanilla ice cream with whipped cream and fruits) — 18 zł
+
+Opis:
+Lekki, prosty deser — wanilia + owoce + bita śmietana. Idealny gdy chcesz coś słodkiego, ale nie ciężkiego.
+
+☕ NAPOJE CIEPŁE I ZIMNE (Hot & cold drinks)
+Kawa / Coffee
+
+Espresso — 10 zł (mocne, krótkie)
+
+Double Espresso — 14 zł (podwójna dawka energii)
+
+Macchiato — 11 zł (espresso z kropką mleka)
+
+Americano — 12 zł (łagodniejsze, większa objętość)
+
+Flat White — 14 zł (kawa mleczna, bardziej „kawowa” niż latte)
+
+Latte — 15 zł (łagodne, mleczne)
+
+Cappucino — 15 zł (klasyk: espresso + mleko + pianka)
+
+Herbata / Tea
+
+Czarna / Black — 10 zł
+
+Zielona / Green — 10 zł
+
+Owocowa / Fruit — 10 zł
+
+Miętowa / Peppermint — 10 zł
+
+Herbata zimowa / Winter tea — 15 zł (rozgrzewająca, sezonowa)
+
+Napoje / Soft Drinks
+
+Pepsi — 10 zł
+
+Pepsi max — 10 zł
+
+Mirinda — 10 zł
+
+7up — 10 zł
+
+Schweppes — 10 zł
+
+Sok pomarańczowy / orange juice — 10 zł
+
+Sok jabłkowy / apple juice — 10 zł
+
+Sok porzeczkowy / blackcurrant juice — 10 zł
+
+Lemoniada / Lemonade — 10 zł
+
+Kompot / Stewed fruit — 10 zł
+
+Woda niegazowana / gazowana (still / sparkling) — 10 zł
+
+Karafka lemoniady 1L / Carafe of lemonade — 30 zł
+
+Karafka wody niegazowana/gazowana / Carafe of water — 20 zł
+
+🍺 ALKOHOLE (Alcohols)
+Piwo / Beers
+
+Żywiec 0,5 — 15 zł
+
+Żywiec Białe 0,5 — 16 zł
+
+Żywiec Białe 0,3 — 14 zł
+
+Żywiec Porter — 16 zł
+
+Żywiec free 0% 0,3 — 13 zł
+
+Heineken 0,3 — 14 zł
+
+Warka Classic 0,5 — 15 zł
+
+Żywiec 0% smakowe — 16 zł
+
+Brackie 0,5 — 15 zł
+
+Sok do piwa — 2 zł (dodatek smakowy do piwa)
+
+Wino / Wine
+
+Białe / White — 20 zł
+
+Czerwone / Red — 20 zł
+
+Grzaniec Galicyjski / Galician mulled wine — 15 zł (rozgrzewające)
+
+Prossecco — 22 zł

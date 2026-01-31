@@ -1,0 +1,15 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/dostawa/page": "/dostawa",
+  "/icon/route": "/icon",
+  "/kontakt/page": "/kontakt",
+  "/manifest.json/route": "/manifest.json",
+  "/menu/page": "/menu",
+  "/opengraph-image/route": "/opengraph-image",
+  "/page": "/",
+  "/polityka-prywatnosci/page": "/polityka-prywatnosci",
+  "/regulamin/page": "/regulamin",
+  "/robots.txt/route": "/robots.txt",
+  "/sitemap.xml/route": "/sitemap.xml"
+}
