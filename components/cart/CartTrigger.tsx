@@ -1,22 +1,34 @@
 "use client";
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { ShoppingBasket } from 'lucide-react';
 import { useCart } from '../../context/CartContext';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export const CartTrigger = () => {
   const { toggleCart, itemsCount } = useCart();
+  const [isBouncing, setIsBouncing] = useState(false);
+
+  useEffect(() => {
+    if (itemsCount > 0) {
+      setIsBouncing(true);
+      const t = setTimeout(() => setIsBouncing(false), 300);
+      return () => clearTimeout(t);
+    }
+  }, [itemsCount]);
 
   return (
     <AnimatePresence>
       {itemsCount > 0 && (
         <motion.button
           initial={{ scale: 0, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
+          animate={{
+            scale: isBouncing ? 1.2 : 1,
+            opacity: 1
+          }}
           exit={{ scale: 0, opacity: 0 }}
           onClick={toggleCart}
-          className="fixed bottom-6 right-6 z-50 flex items-center justify-center p-4 bg-primaryRed text-white rounded-full shadow-lg hover:bg-red-700 transition-colors"
+          className="fixed bottom-6 right-6 z-50 flex items-center justify-center p-4 bg-primary text-white rounded-full shadow-lg hover:bg-primary-hover transition-colors"
           aria-label="Koszyk"
         >
           <ShoppingBasket className="w-6 h-6" />

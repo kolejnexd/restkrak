@@ -45,7 +45,7 @@ export const CartDrawer = () => {
             animate={{ opacity: 0.5 }}
             exit={{ opacity: 0 }}
             onClick={closeCart}
-            className="fixed inset-0 bg-black z-[60]"
+            className="fixed inset-0 bg-frame z-[60]"
           />
 
           {/* Drawer */}
@@ -54,22 +54,22 @@ export const CartDrawer = () => {
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed top-0 right-0 h-full w-full max-w-md bg-white z-[70] shadow-2xl flex flex-col"
+            className="fixed top-0 right-0 h-full w-full max-w-md bg-background z-[70] shadow-2xl flex flex-col border-l border-border-soft"
           >
             {/* Header */}
-            <div className="p-4 border-b flex items-center justify-between bg-bg">
-              <h2 className="text-xl font-bold flex items-center gap-2">
+            <div className="p-4 border-b border-border-soft flex items-center justify-between bg-surface/50 backdrop-blur">
+              <h2 className="text-xl font-serif font-bold flex items-center gap-2 text-ink">
                 {view === 'cart' && <><ShoppingBag className="w-5 h-5" /> Twój koszyk</>}
                 {view === 'checkout' && 'Realizacja zamówienia'}
                 {view === 'success' && 'Sukces!'}
               </h2>
-              <button onClick={closeCart} className="p-2 hover:bg-altBg rounded-full transition-colors">
+              <button onClick={closeCart} className="p-2 hover:bg-background-alt rounded-full transition-colors text-muted hover:text-ink">
                 <X className="w-6 h-6" />
               </button>
             </div>
 
             {/* Content */}
-            <div className="flex-1 overflow-y-auto p-4">
+            <div className="flex-1 overflow-y-auto p-4 bg-background">
               {view === 'cart' && (
                 <>
                   {items.length === 0 ? (
@@ -78,7 +78,7 @@ export const CartDrawer = () => {
                       <p>Twój koszyk jest pusty</p>
                       <button
                         onClick={closeCart}
-                        className="text-primaryRed font-medium hover:underline"
+                        className="text-primary font-medium hover:underline"
                       >
                         Wróć do menu
                       </button>
@@ -86,33 +86,33 @@ export const CartDrawer = () => {
                   ) : (
                     <div className="space-y-4">
                       {items.map((item) => (
-                        <div key={item.id} className="flex gap-4 p-3 border rounded-lg bg-surface shadow-sm">
+                        <div key={item.id} className="flex gap-4 p-4 border border-border-soft rounded-lg bg-surface shadow-sm hover:shadow-md transition-shadow">
                           <div className="flex-1">
-                            <h4 className="font-bold text-ink">{item.name}</h4>
-                            <p className="text-sm text-muted">{item.parsedPrice.toFixed(2)} zł</p>
+                            <h4 className="font-bold text-ink font-serif text-lg">{item.name}</h4>
+                            <p className="text-sm text-gold font-medium">{item.parsedPrice.toFixed(2)} zł</p>
                           </div>
-                          <div className="flex flex-col items-end gap-2">
-                            <div className="flex items-center gap-2 bg-altBg rounded-full p-1">
+                          <div className="flex flex-col items-end gap-3">
+                            <div className="flex items-center gap-2 bg-background-alt rounded-full p-1 border border-border-soft">
                               <button
                                 onClick={() => updateQuantity(item.id, -1)}
-                                className="w-6 h-6 flex items-center justify-center rounded-full hover:bg-white transition-colors"
+                                className="w-6 h-6 flex items-center justify-center rounded-full hover:bg-surface transition-colors"
                                 disabled={item.quantity <= 1}
                               >
-                                <Minus className="w-3 h-3" />
+                                <Minus className="w-3 h-3 text-ink" />
                               </button>
-                              <span className="text-sm font-medium w-4 text-center">{item.quantity}</span>
+                              <span className="text-sm font-bold w-4 text-center text-ink">{item.quantity}</span>
                               <button
                                 onClick={() => updateQuantity(item.id, 1)}
-                                className="w-6 h-6 flex items-center justify-center rounded-full hover:bg-white transition-colors"
+                                className="w-6 h-6 flex items-center justify-center rounded-full hover:bg-surface transition-colors"
                               >
-                                <Plus className="w-3 h-3" />
+                                <Plus className="w-3 h-3 text-ink" />
                               </button>
                             </div>
                             <button
                               onClick={() => removeFromCart(item.id)}
-                              className="text-muted hover:text-primaryRed transition-colors"
+                              className="text-muted hover:text-primary transition-colors text-xs flex items-center gap-1"
                             >
-                              <Trash2 className="w-4 h-4" />
+                              <Trash2 className="w-3 h-3" /> Usuń
                             </button>
                           </div>
                         </div>
@@ -134,18 +134,18 @@ export const CartDrawer = () => {
                     <motion.div
                         initial={{ scale: 0 }}
                         animate={{ scale: 1 }}
-                        className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center"
+                        className="w-24 h-24 bg-green-soft text-green rounded-full flex items-center justify-center"
                     >
-                        <CheckCircle className="w-10 h-10" />
+                        <CheckCircle className="w-12 h-12" />
                     </motion.div>
                     <div>
-                        <h3 className="text-2xl font-bold mb-2">Dziękujemy!</h3>
+                        <h3 className="text-2xl font-serif font-bold mb-2 text-ink">Dziękujemy!</h3>
                         <p className="text-muted">Twoje zamówienie zostało przyjęte.</p>
                         <p className="text-muted">Restauracja wkrótce je potwierdzi.</p>
                     </div>
                     <button
                         onClick={closeCart}
-                        className="px-8 py-3 bg-primaryRed text-white rounded font-bold hover:bg-red-700 transition-colors"
+                        className="px-8 py-3 bg-primary text-white rounded-sm font-bold hover:bg-primary-hover transition-colors shadow-lg"
                     >
                         Zamknij
                     </button>
@@ -155,14 +155,14 @@ export const CartDrawer = () => {
 
             {/* Footer (Cart View only) */}
             {view === 'cart' && items.length > 0 && (
-              <div className="p-4 border-t bg-bg space-y-4">
-                <div className="flex justify-between items-center text-lg font-bold">
+              <div className="p-6 border-t border-border-soft bg-surface space-y-4 shadow-[0_-5px_15px_rgba(0,0,0,0.02)]">
+                <div className="flex justify-between items-center text-xl font-bold font-serif text-ink">
                   <span>Razem:</span>
                   <span>{cartTotal.toFixed(2)} zł</span>
                 </div>
                 <button
                   onClick={() => setView('checkout')}
-                  className="w-full py-3 bg-primaryRed text-white rounded font-bold hover:bg-red-700 transition-colors shadow-lg"
+                  className="w-full py-4 bg-primary text-white rounded-sm font-bold hover:bg-primary-hover transition-colors shadow-lg uppercase tracking-wide text-sm"
                 >
                   Przejdź do kasy
                 </button>

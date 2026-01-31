@@ -2,6 +2,7 @@
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { CartItem, MenuItem } from '../types';
+import { useToast } from './ToastContext';
 
 interface CartContextType {
   items: CartItem[];
@@ -23,6 +24,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
   const [items, setItems] = useState<CartItem[]>([]);
   const [isOpen, setIsOpen] = useState(false);
   const [isInitialized, setIsInitialized] = useState(false);
+  const { showToast } = useToast();
 
   // Load from LocalStorage on mount
   useEffect(() => {
@@ -67,7 +69,9 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
         return [...prev, { ...item, quantity: 1, parsedPrice: priceVal }];
       }
     });
-    setIsOpen(true);
+
+    // UX improvement: Show toast instead of opening drawer
+    showToast(`Dodano do zamówienia: ${item.name}`);
   };
 
   const removeFromCart = (itemId: string) => {

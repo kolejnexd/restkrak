@@ -5,7 +5,8 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { orderSchema, OrderFormData } from '../../lib/validators';
 import { useCart } from '../../context/CartContext';
-import { Loader2, AlertCircle } from 'lucide-react';
+import { Loader2, AlertCircle, CreditCard, Banknote, Truck, Store } from 'lucide-react';
+import { clsx } from 'clsx';
 
 interface CheckoutFormProps {
   onSuccess: () => void;
@@ -34,8 +35,8 @@ export const CheckoutForm = ({ onSuccess, onCancel }: CheckoutFormProps) => {
   });
 
   const deliveryMethod = watch('delivery.method');
+  const paymentMethod = watch('paymentMethod');
 
-  // Simple delivery cost calc for UI display (real logic is on server)
   const deliveryCost = deliveryMethod === 'delivery' ? (cartTotal > 120 ? 0 : 15) : 0;
   const total = cartTotal + deliveryCost;
 
@@ -52,7 +53,7 @@ export const CheckoutForm = ({ onSuccess, onCancel }: CheckoutFormProps) => {
           items: items.map(item => ({
             id: item.id,
             quantity: item.quantity,
-          })), // Send only IDs and quantity for security
+          })),
         }),
       });
 
@@ -71,169 +72,179 @@ export const CheckoutForm = ({ onSuccess, onCancel }: CheckoutFormProps) => {
     }
   };
 
+  const inputClass = "w-full p-3 border border-border-soft rounded-sm bg-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-muted/50";
+  const labelClass = "block text-sm font-medium mb-1.5 text-ink";
+  const sectionTitle = "text-lg font-serif font-bold text-ink border-b border-border-soft pb-2 mb-4";
+
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-8 animate-in fade-in slide-in-from-right-4 duration-300">
+
+      {/* Contact Info */}
       <div className="space-y-4">
-        <h3 className="text-lg font-bold border-b pb-2">Dane kontaktowe</h3>
+        <h3 className={sectionTitle}>Dane kontaktowe</h3>
 
         <div>
-          <label className="block text-sm font-medium mb-1">Imię i nazwisko</label>
+          <label className={labelClass}>Imię i nazwisko</label>
           <input
             {...register('customer.fullName')}
-            className="w-full p-2 border border-borderSoft rounded bg-surface"
+            className={inputClass}
             placeholder="Jan Kowalski"
           />
           {errors.customer?.fullName && (
-            <p className="text-primaryRed text-xs mt-1">{errors.customer.fullName.message}</p>
+            <p className="text-primary text-xs mt-1 font-medium">{errors.customer.fullName.message}</p>
           )}
         </div>
 
         <div>
-          <label className="block text-sm font-medium mb-1">Telefon</label>
+          <label className={labelClass}>Telefon</label>
           <input
             {...register('customer.phoneNumber')}
-            className="w-full p-2 border border-borderSoft rounded bg-surface"
+            className={inputClass}
             placeholder="123 456 789"
           />
           {errors.customer?.phoneNumber && (
-            <p className="text-primaryRed text-xs mt-1">{errors.customer.phoneNumber.message}</p>
+            <p className="text-primary text-xs mt-1 font-medium">{errors.customer.phoneNumber.message}</p>
           )}
         </div>
 
         <div>
-          <label className="block text-sm font-medium mb-1">Email (opcjonalnie)</label>
+          <label className={labelClass}>Email (opcjonalnie)</label>
           <input
             {...register('customer.email')}
-            className="w-full p-2 border border-borderSoft rounded bg-surface"
+            className={inputClass}
             placeholder="jan@example.com"
           />
           {errors.customer?.email && (
-            <p className="text-primaryRed text-xs mt-1">{errors.customer.email.message}</p>
+            <p className="text-primary text-xs mt-1 font-medium">{errors.customer.email.message}</p>
           )}
         </div>
       </div>
 
+      {/* Delivery Method */}
       <div className="space-y-4">
-        <h3 className="text-lg font-bold border-b pb-2">Dostawa</h3>
+        <h3 className={sectionTitle}>Sposób odbioru</h3>
 
-        <div className="flex gap-4">
-          <label className="flex items-center gap-2 cursor-pointer">
-            <input
-              type="radio"
-              value="delivery"
-              {...register('delivery.method')}
-              className="text-primaryRed focus:ring-primaryRed"
-            />
-            <span>Dostawa</span>
+        <div className="grid grid-cols-2 gap-4">
+          <label className={clsx(
+            "cursor-pointer border rounded-lg p-4 flex flex-col items-center gap-2 transition-all hover:bg-background-alt",
+            deliveryMethod === 'delivery' ? "border-primary bg-primary-soft/20 ring-1 ring-primary" : "border-border-soft bg-surface"
+          )}>
+            <input type="radio" value="delivery" {...register('delivery.method')} className="sr-only" />
+            <Truck className={clsx("w-6 h-6", deliveryMethod === 'delivery' ? "text-primary" : "text-muted")} />
+            <span className="font-medium text-sm">Dostawa</span>
           </label>
-          <label className="flex items-center gap-2 cursor-pointer">
-            <input
-              type="radio"
-              value="pickup"
-              {...register('delivery.method')}
-              className="text-primaryRed focus:ring-primaryRed"
-            />
-            <span>Odbiór osobisty</span>
+
+          <label className={clsx(
+            "cursor-pointer border rounded-lg p-4 flex flex-col items-center gap-2 transition-all hover:bg-background-alt",
+            deliveryMethod === 'pickup' ? "border-primary bg-primary-soft/20 ring-1 ring-primary" : "border-border-soft bg-surface"
+          )}>
+            <input type="radio" value="pickup" {...register('delivery.method')} className="sr-only" />
+            <Store className={clsx("w-6 h-6", deliveryMethod === 'pickup' ? "text-primary" : "text-muted")} />
+            <span className="font-medium text-sm">Odbiór osobisty</span>
           </label>
         </div>
 
         {deliveryMethod === 'delivery' && (
-          <div className="space-y-3 pl-4 border-l-2 border-borderSoft">
+          <div className="space-y-3 pl-4 border-l-2 border-primary/20 animate-in slide-in-from-top-2">
             <div>
-              <label className="block text-sm font-medium mb-1">Ulica i numer</label>
+              <label className={labelClass}>Ulica i numer</label>
               <input
                 {...register('delivery.address')}
-                className="w-full p-2 border border-borderSoft rounded bg-surface"
+                className={inputClass}
                 placeholder="Długa 15/4"
               />
               {errors.delivery?.address && (
-                <p className="text-primaryRed text-xs mt-1">{errors.delivery.address.message}</p>
+                <p className="text-primary text-xs mt-1 font-medium">{errors.delivery.address.message}</p>
               )}
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-medium mb-1">Kod pocztowy</label>
+                <label className={labelClass}>Kod pocztowy</label>
                 <input
                   {...register('delivery.postalCode')}
-                  className="w-full p-2 border border-borderSoft rounded bg-surface"
+                  className={inputClass}
                   placeholder="31-000"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-1">Miasto</label>
+                <label className={labelClass}>Miasto</label>
                 <input
                   {...register('delivery.city')}
-                  className="w-full p-2 border border-borderSoft rounded bg-surface"
+                  className={inputClass}
                 />
               </div>
             </div>
             {(errors.delivery?.postalCode || errors.delivery?.city) && (
-               <p className="text-primaryRed text-xs mt-1">Kod pocztowy i miasto są wymagane</p>
+               <p className="text-primary text-xs mt-1 font-medium">Kod pocztowy i miasto są wymagane</p>
             )}
+
+            <div className="text-xs text-muted bg-background-alt p-2 rounded">
+               {cartTotal > 120 ? "Darmowa dostawa!" : "Koszt dostawy: 15.00 zł (darmowa od 120 zł)"}
+            </div>
           </div>
         )}
       </div>
 
+      {/* Payment Method */}
       <div className="space-y-4">
-        <h3 className="text-lg font-bold border-b pb-2">Płatność (przy odbiorze)</h3>
-        <div className="flex gap-4">
-          <label className="flex items-center gap-2 cursor-pointer">
-            <input
-              type="radio"
-              value="cash"
-              {...register('paymentMethod')}
-              className="text-primaryRed focus:ring-primaryRed"
-            />
-            <span>Gotówka</span>
+        <h3 className={sectionTitle}>Płatność (przy odbiorze)</h3>
+        <div className="grid grid-cols-2 gap-4">
+          <label className={clsx(
+            "cursor-pointer border rounded-lg p-4 flex flex-col items-center gap-2 transition-all hover:bg-background-alt",
+            paymentMethod === 'cash' ? "border-primary bg-primary-soft/20 ring-1 ring-primary" : "border-border-soft bg-surface"
+          )}>
+            <input type="radio" value="cash" {...register('paymentMethod')} className="sr-only" />
+            <Banknote className={clsx("w-6 h-6", paymentMethod === 'cash' ? "text-primary" : "text-muted")} />
+            <span className="font-medium text-sm">Gotówka</span>
           </label>
-          <label className="flex items-center gap-2 cursor-pointer">
-            <input
-              type="radio"
-              value="card_on_delivery"
-              {...register('paymentMethod')}
-              className="text-primaryRed focus:ring-primaryRed"
-            />
-            <span>Karta</span>
+          <label className={clsx(
+            "cursor-pointer border rounded-lg p-4 flex flex-col items-center gap-2 transition-all hover:bg-background-alt",
+            paymentMethod === 'card_on_delivery' ? "border-primary bg-primary-soft/20 ring-1 ring-primary" : "border-border-soft bg-surface"
+          )}>
+            <input type="radio" value="card_on_delivery" {...register('paymentMethod')} className="sr-only" />
+            <CreditCard className={clsx("w-6 h-6", paymentMethod === 'card_on_delivery' ? "text-primary" : "text-muted")} />
+            <span className="font-medium text-sm">Karta</span>
           </label>
         </div>
       </div>
 
       <div className="space-y-4">
-        <h3 className="text-lg font-bold border-b pb-2">Uwagi</h3>
+        <h3 className={sectionTitle}>Uwagi</h3>
         <textarea
            {...register('customer.notes')}
-           className="w-full p-2 border border-borderSoft rounded bg-surface h-20"
+           className={inputClass}
            placeholder="Np. kod do domofonu, bez cebuli..."
+           rows={3}
         />
       </div>
 
       {error && (
-        <div className="p-3 bg-red-100 border border-red-300 text-red-800 rounded flex items-center gap-2">
-            <AlertCircle className="w-5 h-5" />
-            <span>{error}</span>
+        <div className="p-4 bg-primary-soft/30 border border-primary/30 text-primary-hover rounded-lg flex items-start gap-3">
+            <AlertCircle className="w-5 h-5 shrink-0 mt-0.5" />
+            <span className="text-sm font-medium">{error}</span>
         </div>
       )}
 
-      <div className="border-t pt-4 mt-6">
-        <div className="flex justify-between mb-2">
+      <div className="bg-background-alt p-4 rounded-lg space-y-2">
+        <div className="flex justify-between text-muted">
             <span>Wartość koszyka:</span>
             <span>{cartTotal.toFixed(2)} zł</span>
         </div>
-        <div className="flex justify-between mb-2">
+        <div className="flex justify-between text-muted">
             <span>Dostawa:</span>
             <span>{deliveryCost > 0 ? `${deliveryCost.toFixed(2)} zł` : '0.00 zł'}</span>
         </div>
-        <div className="flex justify-between text-xl font-bold mt-2">
+        <div className="border-t border-border-soft pt-2 mt-2 flex justify-between text-xl font-bold text-ink">
             <span>Do zapłaty:</span>
             <span>{total.toFixed(2)} zł</span>
         </div>
       </div>
 
-      <div className="flex gap-4 pt-4">
+      <div className="flex gap-4 pt-2">
         <button
           type="button"
           onClick={onCancel}
-          className="flex-1 py-3 px-4 border border-borderStrong rounded text-ink hover:bg-altBg transition-colors"
+          className="flex-1 py-3 px-4 border border-border-strong rounded-sm text-ink hover:bg-background-alt transition-colors font-medium"
           disabled={isSubmitting}
         >
           Wróć
@@ -241,7 +252,7 @@ export const CheckoutForm = ({ onSuccess, onCancel }: CheckoutFormProps) => {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="flex-1 py-3 px-4 bg-primaryRed text-white rounded font-bold hover:bg-red-700 transition-colors flex items-center justify-center gap-2"
+          className="flex-1 py-3 px-4 bg-primary text-white rounded-sm font-bold hover:bg-primary-hover transition-colors flex items-center justify-center gap-2 shadow-lg"
         >
           {isSubmitting ? <Loader2 className="w-5 h-5 animate-spin" /> : 'Zamawiam'}
         </button>

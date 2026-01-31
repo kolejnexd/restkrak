@@ -78,10 +78,14 @@ export async function POST(request: Request) {
     const totalAmount = itemsTotal + deliveryCost;
 
     // 4. Save to Supabase
+    // Generate ID locally to avoid RLS SELECT restriction issues with the anonymous client
+    const orderId = crypto.randomUUID();
+
     // Insert Order
-    const { data: orderData, error: orderError } = await supabase
+    const { error: orderError } = await supabase
       .from('orders')
       .insert({
+        id: orderId,
         status: 'new',
         delivery_method: delivery.method,
         payment_method: paymentMethod,
@@ -95,9 +99,7 @@ export async function POST(request: Request) {
         items_total: itemsTotal,
         delivery_cost: deliveryCost,
         total_amount: totalAmount,
-      })
-      .select()
-      .single();
+      });
 
     if (orderError) {
       console.error('Supabase Order Error:', orderError);
@@ -106,8 +108,6 @@ export async function POST(request: Request) {
         { status: 500 }
       );
     }
-
-    const orderId = orderData.id;
 
     // Insert Order Items
     const itemsToInsert = orderItemsData.map(item => ({
